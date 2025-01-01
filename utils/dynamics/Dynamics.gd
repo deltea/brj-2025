@@ -1,11 +1,10 @@
 extends Node
 
-var dynamics_solver_scene = preload("res://utils/dynamics/dynamics_solver.tscn")
-var dynamics_solver_vector_scene = preload("res://utils/dynamics/dynamics_solver_vector.tscn")
+var dynamics_solver_scene = preload("./dynamics_solver.tscn")
+var dynamics_solver_vector_scene = preload("./dynamics_solver_vector.tscn")
 
-func wait(duration: float):
-	await get_tree().create_timer(duration, false, false, true).timeout
-
+## Create a one-dimensional [DynamicsSolver] instance that can calculate animations.[br]
+## Pass in a [DynamicsResource] for f, z, and r settings for the new solver.
 func create_dynamics(dynamics: DynamicsResource) -> DynamicsSolver:
 	if not dynamics: return null
 	var solver = dynamics_solver_scene.instantiate() as DynamicsSolver
@@ -15,6 +14,8 @@ func create_dynamics(dynamics: DynamicsResource) -> DynamicsSolver:
 	get_tree().root.call_deferred("add_child", solver)
 	return solver
 
+## Create a 2-dimensional [DynamicsSolverVector] instance that can calculate animations.[br]
+## Pass in a [DynamicsResource] for f, z, and r settings for the new solver.
 func create_dynamics_vector(dynamics: DynamicsResource) -> DynamicsSolverVector:
 	if not dynamics: return null
 	var solver = dynamics_solver_vector_scene.instantiate() as DynamicsSolverVector
