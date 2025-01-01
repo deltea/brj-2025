@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 Clock="*res://autoloads/Clock.gd"
 RoomManager="*res://autoloads/RoomManager/RoomManager.tscn"
 AudioManager="*res://autoloads/AudioManager/AudioManager.tscn"
+Dynamics="*res://utils/dynamics/Dynamics.gd"
 
 [display]
 
