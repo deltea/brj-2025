@@ -1,0 +1,10 @@
+Every object in the game should have a dedicated folder in the scenes folder. Objects like the player, keys, tilemap, or enemies.
+
+For example:
+
+  /scenes
+    /player
+      player.tscn
+      player.gd
+    /tilemap
+      tilemap.tscn

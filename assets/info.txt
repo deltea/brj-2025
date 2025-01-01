@@ -1,0 +1,1 @@
+Put images, audio, and whatever media into the assets folder.

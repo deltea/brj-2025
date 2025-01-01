@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://52wmlq6x4voi"]
+
+[ext_resource type="Script" path="res://autoloads/RoomManager.gd" id="1_nrr6i"]
+
+[node name="RoomManager" type="CanvasLayer"]
+script = ExtResource("1_nrr6i")
