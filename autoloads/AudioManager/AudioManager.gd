@@ -5,7 +5,8 @@ extends Node
 # var sound = preload("res://assets/sfx/sound.wav")
 # var music = preload("res://assets/music/music.wav")
 
-## The current volume in percent the AudioStreamPlayer is at, use change_volume() to change.
+## The current volume in percent the AudioStreamPlayer is at.[br]
+## Call [method change_volume] to change volume.
 var volume = 100
 
 ## Play a music track using the music AudioStreamPlayer.
