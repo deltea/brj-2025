@@ -1,0 +1,1 @@
+Put individual scripts that aren't connected to an object here, for example resource definitions or miscellaneous scripts.

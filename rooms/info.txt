@@ -1,0 +1,1 @@
+"Rooms" are kinda like scenes in Unity, they contain a level, a menu screen, or a settings screen. Basically screens.
