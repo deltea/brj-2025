@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cg0gct7iugdgf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ycsia"]
+size = Vector2(9, 320)
+
+[node name="Test Collider" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 159)
+shape = SubResource("RectangleShape2D_ycsia")
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(0, 319, 0, -1)
