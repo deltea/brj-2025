@@ -30,7 +30,9 @@ func _on_collided(body : Node) -> void:
 	RoomManager.current_room.camera.shake();
 	if body is Entity:
 		var damage_indicator_instance : DamageIndicator = damage_indicator_scene.instantiate();
-		damage_indicator_instance.set_up(body.global_position, damage);
+		
+		var impact_direction = (body.global_position - global_position).normalized();
+		damage_indicator_instance.set_up(body.global_position, damage, 1, impact_direction);
 		add_sibling(damage_indicator_instance);
 		
 		body.take_damage(damage)
