@@ -22,7 +22,7 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_released("mouse_left"):
 		var direction = (drag_start_pos - get_global_mouse_position()).normalized()
 		var distance = drag_start_pos.distance_to(get_global_mouse_position());
-		velocity = direction * distance * 5.0;
+		apply_central_impulse(direction * distance * 5.0);
 		drag_line.visible = false
 		Engine.set_time_scale(1);
 

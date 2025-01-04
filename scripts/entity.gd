@@ -1,4 +1,4 @@
-class_name Entity extends CharacterBody2D
+class_name Entity extends RigidBody2D
 
 signal collided;
 signal died;
@@ -19,7 +19,7 @@ func _physics_process(delta: float) -> void:
 
 func update_position(delta : float):
 	$AnimatedSprite2D.rotation += angular_speed * delta;
-	var collision = move_and_collide(velocity * delta);
-	if collision:
-		velocity = velocity.bounce(collision.get_normal()) * bounce_strength;
-		collided.emit();
+	# var collision = move_and_collide(velocity * delta);
+	# if collision:
+	# 	velocity = velocity.bounce(collision.get_normal()) * bounce_strength;
+	# 	collided.emit();
