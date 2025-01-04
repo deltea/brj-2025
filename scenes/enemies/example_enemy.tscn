@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dxsim87luwpwc" path="res://scenes/enemies/enemy.tscn" id="1_krwge"]
 [ext_resource type="Script" path="res://scripts/states/Enemy States/EnemyCharge.gd" id="2_eqkq3"]
 [ext_resource type="Script" path="res://scripts/states/Enemy States/EnemyIdle.gd" id="3_ccpcs"]
-[ext_resource type="Texture2D" uid="uid://emj1y67tfgx" path="res://assets/EnemySprites/EnemySprite.png" id="4_k4rdl"]
+[ext_resource type="Texture2D" uid="uid://emj1y67tfgx" path="res://assets/Sprites/EnemySprites/EnemySprite.png" id="4_k4rdl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5wekg"]
 radius = 16.0
@@ -20,7 +20,7 @@ animations = [{
 }]
 
 [node name="Example Enemy" instance=ExtResource("1_krwge")]
-health = 20.0
+init_health = 20
 
 [node name="State Machine" parent="." index="0" node_paths=PackedStringArray("initial_state")]
 initial_state = NodePath("EnemyIdle")

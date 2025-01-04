@@ -7,8 +7,12 @@ signal died;
 
 @export var bounce_strength : float = 1.0;
 @export var angular_speed : float = 0.1;
-@export var health : float = 100.0;
+@export var init_health = 100;
+@export var health : float;
 @export var damage : float = 10.0;
+
+func _ready():
+	health = init_health;
 
 func take_damage(damage : float):
 	health -= damage;
