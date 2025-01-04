@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://ctoo0n22cfbd7"]
+[gd_scene load_steps=9 format=3 uid="uid://ctoo0n22cfbd7"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_s4y46"]
 [ext_resource type="Texture2D" uid="uid://bndp3mnpehlyi" path="res://assets/PlayerSprites/PlaceHolderPlayerSprite.png" id="2_remjr"]
+[ext_resource type="Texture2D" uid="uid://bxtc5illu43wy" path="res://assets/generic/circle-big.png" id="3_n6hd2"]
+[ext_resource type="Texture2D" uid="uid://c8ke4gok4cnd0" path="res://assets/generic/square-big.png" id="3_ptpn0"]
 [ext_resource type="PackedScene" uid="uid://ccklh1or0aic6" path="res://scenes/camera/camera.tscn" id="4_oyx0u"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_u1308"]
@@ -11,6 +13,12 @@ bounce = 1.0
 [sub_resource type="SpriteFrames" id="SpriteFrames_es6yv"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ptpn0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n6hd2")
+}, {
 "duration": 1.0,
 "texture": ExtResource("2_remjr")
 }],
@@ -24,6 +32,7 @@ radius = 16.0
 
 [node name="Player" type="RigidBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_u1308")
+inertia = 1.0
 contact_monitor = true
 max_contacts_reported = 1
 linear_damp = 0.8

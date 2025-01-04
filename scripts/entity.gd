@@ -6,7 +6,7 @@ signal died;
 # const SPEED = 300.0;
 
 @export var bounce_strength : float = 1.0;
-@export var angular_speed : float = 0.1;
+@export var angular_speed : float = 0.05;
 @export var health : float = 100.0;
 
 func take_damage(damage : float):
