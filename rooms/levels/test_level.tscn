@@ -7,7 +7,7 @@
 
 [node name="TestLevel" instance=ExtResource("1_nfnad")]
 
-[node name="Player" parent="." index="0" groups=["players"] instance=ExtResource("2_av0wu")]
+[node name="Player" parent="." index="0" instance=ExtResource("2_av0wu")]
 z_index = 5
 position = Vector2(416, 271)
 
