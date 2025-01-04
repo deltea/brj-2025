@@ -27,4 +27,5 @@ func _process(_delta: float) -> void:
 		Engine.set_time_scale(1);
 
 func _on_collided() -> void:
-	RoomManager.current_room.camera.shake();
+	# RoomManager.current_room.camera.shake();
+	RoomManager.current_room.camera.dir_shake(linear_velocity.normalized(), 10);

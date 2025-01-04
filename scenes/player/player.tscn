@@ -40,6 +40,7 @@ linear_damp = 0.8
 script = ExtResource("1_s4y46")
 
 [node name="Camera" parent="." instance=ExtResource("4_oyx0u")]
+top_level = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_es6yv")

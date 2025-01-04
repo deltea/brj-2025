@@ -3,5 +3,6 @@
 [ext_resource type="Script" path="res://scenes/camera/camera.gd" id="1_chfn3"]
 
 [node name="Camera" type="Camera2D"]
+position = Vector2(240, 160)
 position_smoothing_enabled = true
 script = ExtResource("1_chfn3")
