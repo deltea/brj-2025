@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://ctoo0n22cfbd7"]
+
+[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_s4y46"]
+[ext_resource type="Texture2D" uid="uid://bndp3mnpehlyi" path="res://assets/PlayerSprites/PlaceHolderPlayerSprite.png" id="2_remjr"]
+[ext_resource type="PackedScene" uid="uid://ccklh1or0aic6" path="res://scenes/camera/camera.tscn" id="4_oyx0u"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_u1308"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_es6yv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_remjr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ex4hq"]
+radius = 16.0
+
+[node name="Player" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_u1308")
+contact_monitor = true
+max_contacts_reported = 1
+linear_damp = 0.8
+script = ExtResource("1_s4y46")
+
+[node name="Camera" parent="." instance=ExtResource("4_oyx0u")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 5
+sprite_frames = SubResource("SpriteFrames_es6yv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ex4hq")
+
+[node name="DragLine" type="Line2D" parent="."]
+top_level = true
+points = PackedVector2Array(0, 0, 0, 0)
+width = 2.0
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="collided" from="." to="." method="_on_collided"]

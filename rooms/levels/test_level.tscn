@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dblppfoq00bb"]
+
+[ext_resource type="PackedScene" uid="uid://c5htw6kws7a1r" path="res://rooms/level.tscn" id="1_nfnad"]
+[ext_resource type="PackedScene" uid="uid://ctoo0n22cfbd7" path="res://scenes/player/player.tscn" id="2_av0wu"]
+[ext_resource type="PackedScene" uid="uid://danvefsaxgyvo" path="res://scenes/test_collider.tscn" id="3_qdcyq"]
+
+[node name="TestLevel" instance=ExtResource("1_nfnad")]
+
+[node name="Player" parent="." index="0" instance=ExtResource("2_av0wu")]
+z_index = 5
+position = Vector2(240, 160)
+
+[node name="TestWall" parent="." index="1" instance=ExtResource("3_qdcyq")]
+position = Vector2(5, 0)
+
+[node name="TestWall2" parent="." index="2" instance=ExtResource("3_qdcyq")]
+position = Vector2(510, 4)
+rotation = 1.5708
+scale = Vector2(1, 1.6)
+
+[node name="TestWall3" parent="." index="3" instance=ExtResource("3_qdcyq")]
+position = Vector2(475, 0)
+
+[node name="TestWall4" parent="." index="4" instance=ExtResource("3_qdcyq")]
+position = Vector2(511, 314)
+rotation = 1.5708
+scale = Vector2(1, 1.6)
