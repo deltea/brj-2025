@@ -27,12 +27,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ex4hq"]
-radius = 16.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_lv8pq"]
+radius = 16.0312
 
 [node name="Player" type="RigidBody2D"]
+z_index = 5
 physics_material_override = SubResource("PhysicsMaterial_u1308")
-inertia = 1.0
+inertia = 1000.0
 contact_monitor = true
 max_contacts_reported = 1
 linear_damp = 0.8
@@ -41,11 +42,10 @@ script = ExtResource("1_s4y46")
 [node name="Camera" parent="." instance=ExtResource("4_oyx0u")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-z_index = 5
 sprite_frames = SubResource("SpriteFrames_es6yv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_ex4hq")
+shape = SubResource("CircleShape2D_lv8pq")
 
 [node name="DragLine" type="Line2D" parent="."]
 top_level = true
