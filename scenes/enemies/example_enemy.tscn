@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://hs4jyaqetvdb"]
+
+[ext_resource type="PackedScene" uid="uid://dxsim87luwpwc" path="res://scenes/enemies/enemy.tscn" id="1_krwge"]
+[ext_resource type="Script" path="res://scripts/states/Enemy States/EnemyCharge.gd" id="2_eqkq3"]
+[ext_resource type="Script" path="res://scripts/states/Enemy States/EnemyIdle.gd" id="3_ccpcs"]
+[ext_resource type="Texture2D" uid="uid://emj1y67tfgx" path="res://assets/EnemySprites/EnemySprite.png" id="4_k4rdl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5wekg"]
+radius = 16.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o6qwq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_k4rdl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Example Enemy" instance=ExtResource("1_krwge")]
+
+[node name="State Machine" parent="." index="0" node_paths=PackedStringArray("initial_state")]
+initial_state = NodePath("EnemyIdle")
+
+[node name="EnemyCharge" type="Node" parent="State Machine" index="0" node_paths=PackedStringArray("enemy")]
+script = ExtResource("2_eqkq3")
+enemy = NodePath("../..")
+
+[node name="EnemyIdle" type="Node" parent="State Machine" index="1" node_paths=PackedStringArray("enemy")]
+script = ExtResource("3_ccpcs")
+enemy = NodePath("../..")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_5wekg")
+
+[node name="AnimatedSprite2D" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_o6qwq")
