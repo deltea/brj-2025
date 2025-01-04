@@ -26,5 +26,12 @@ func _process(_delta: float) -> void:
 		drag_line.visible = false
 		Engine.set_time_scale(1);
 
-func _on_collided() -> void:
+func _on_collided(body : Node) -> void:
 	RoomManager.current_room.camera.shake();
+	if body is Entity:
+		body.take_damage(damage)
+		take_damage(body.damage);
+		print(health)
+
+func _on_died() -> void:
+	get_tree().reload_current_scene();

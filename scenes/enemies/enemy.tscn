@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxsim87luwpwc"]
+
+[ext_resource type="Script" path="res://scenes/enemies/enemy.gd" id="1_1h43w"]
+[ext_resource type="Script" path="res://scenes/enemies/state_machine.gd" id="2_uhek4"]
+
+[node name="Enemy" type="RigidBody2D"]
+script = ExtResource("1_1h43w")
+
+[node name="State Machine" type="Node" parent="."]
+script = ExtResource("2_uhek4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[connection signal="died" from="." to="." method="_on_died"]

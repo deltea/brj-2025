@@ -47,3 +47,4 @@ end_cap_mode = 2
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="collided" from="." to="." method="_on_collided"]
+[connection signal="died" from="." to="." method="_on_died"]
