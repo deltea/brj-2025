@@ -3,7 +3,7 @@ class_name EnemyCharge
 
 @export var enemy : Enemy;
 @export var stop_radius : float = 25;
-@export var forget_dist: float = 250;
+@export var forget_dist: float = 200;
 
 var player : RigidBody2D;
 @onready var animated_sprite = enemy.get_node("AnimatedSprite2D");
@@ -11,7 +11,7 @@ var player : RigidBody2D;
 
 func Enter():
 	print("Going to Charge")
-	player = get_tree().get_first_node_in_group("players");
+	player = RoomManager.current_room.player;
 
 func Physics_Update(_delta : float) -> void:
 	var direction = player.global_position - enemy.global_position;

@@ -20,6 +20,7 @@ animations = [{
 }]
 
 [node name="Example Enemy" instance=ExtResource("1_krwge")]
+health = 20.0
 
 [node name="State Machine" parent="." index="0" node_paths=PackedStringArray("initial_state")]
 initial_state = NodePath("EnemyIdle")
