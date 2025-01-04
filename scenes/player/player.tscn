@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dpuft7c44mcjd"]
+[gd_scene load_steps=6 format=3 uid="uid://ctoo0n22cfbd7"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_s4y46"]
+[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_s4y46"]
 [ext_resource type="Texture2D" uid="uid://bndp3mnpehlyi" path="res://assets/PlayerSprites/PlaceHolderPlayerSprite.png" id="2_remjr"]
-[ext_resource type="Script" path="res://scripts/camera_2d.gd" id="3_mmg5d"]
-[ext_resource type="Script" path="res://scripts/dragging_back.gd" id="4_kapmf"]
+[ext_resource type="PackedScene" uid="uid://ccklh1or0aic6" path="res://scenes/camera/camera.tscn" id="4_oyx0u"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_es6yv"]
 animations = [{
@@ -21,9 +20,8 @@ radius = 16.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_s4y46")
-slow_down_factor = null
-bounce_strength = null
-angular_speed = 10
+
+[node name="Camera" parent="." instance=ExtResource("4_oyx0u")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 5
@@ -32,13 +30,12 @@ sprite_frames = SubResource("SpriteFrames_es6yv")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ex4hq")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
-script = ExtResource("3_mmg5d")
-
-[node name="Dragging Back" type="Line2D" parent="."]
+[node name="DragLine" type="Line2D" parent="."]
+top_level = true
+points = PackedVector2Array(0, 0, 0, 0)
 width = 2.0
-script = ExtResource("4_kapmf")
+begin_cap_mode = 2
+end_cap_mode = 2
 
 [connection signal="collided" from="." to="." method="_on_collided"]
 [connection signal="input_event" from="." to="." method="_on_input_event"]

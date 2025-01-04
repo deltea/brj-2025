@@ -1,10 +1,9 @@
-extends CharacterBody2D
-class_name Entity;
+class_name Entity extends CharacterBody2D
 
 signal collided;
 signal died;
 
-const SPEED = 300.0
+const SPEED = 300.0;
 
 @export var bounce_strength : float = 1.0;
 @export var angular_speed : float = 50.0;
@@ -17,10 +16,10 @@ func take_damage(damage : float):
 
 func _physics_process(delta: float) -> void:
 	update_position(delta);
-	
+
 func update_position(delta : float):
 	$AnimatedSprite2D.rotation += angular_speed * delta;
-	var collision = move_and_collide(velocity * delta)
+	var collision = move_and_collide(velocity * delta);
 	if collision:
-		velocity = velocity.bounce(collision.get_normal()) * bounce_strength
-		collided.emit();		
+		velocity = velocity.bounce(collision.get_normal()) * bounce_strength;
+		collided.emit();
