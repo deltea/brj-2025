@@ -10,6 +10,7 @@ signal died;
 @export var init_health = 100;
 @export var health : float;
 @export var damage : float = 10.0;
+@onready var damage_indicator_scene : PackedScene = load("res://scenes/damage_indicator.tscn");
 
 func _ready():
 	health = init_health;

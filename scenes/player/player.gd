@@ -29,6 +29,10 @@ func _process(_delta: float) -> void:
 func _on_collided(body : Node) -> void:
 	RoomManager.current_room.camera.shake();
 	if body is Entity:
+		var damage_indicator_instance : DamageIndicator = damage_indicator_scene.instantiate();
+		damage_indicator_instance.set_up(body.global_position, damage);
+		add_sibling(damage_indicator_instance);
+		
 		body.take_damage(damage)
 		take_damage(body.damage);
 		print(health)

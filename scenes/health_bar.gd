@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 	
 	var clamped_percentage = clamp_to_interval(health_percentage, 1/health_bar_intervals);
 	health_bar_content.target_scale = Vector2(clamped_percentage, 1)
-	print((1-clamped_percentage))
+	#I am sure there is a better way of doing this, clamping the health bar to the left. 
 	health_bar_content.position.x = init_bar_position.x - ((1-clamped_percentage) * health_bar_size.x/2)
 
 func clamp_to_interval(num : float, interval_length : float) -> float:
