@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dblppfoq00bb"]
+[gd_scene load_steps=7 format=3 uid="uid://dblppfoq00bb"]
 
 [ext_resource type="PackedScene" uid="uid://c5htw6kws7a1r" path="res://rooms/level.tscn" id="1_nfnad"]
 [ext_resource type="PackedScene" uid="uid://ctoo0n22cfbd7" path="res://scenes/player/player.tscn" id="2_av0wu"]
+[ext_resource type="PackedScene" uid="uid://calsodcj6nbtc" path="res://scenes/example_item.tscn" id="3_npjtm"]
 [ext_resource type="PackedScene" uid="uid://danvefsaxgyvo" path="res://scenes/test_collider.tscn" id="3_qdcyq"]
 [ext_resource type="PackedScene" uid="uid://hs4jyaqetvdb" path="res://scenes/enemies/example_enemy.tscn" id="4_wodb3"]
 [ext_resource type="PackedScene" uid="uid://bojhr0psvqjli" path="res://scenes/hud.tscn" id="5_5n3ta"]
@@ -11,6 +12,10 @@
 [node name="Player" parent="." index="0" instance=ExtResource("2_av0wu")]
 z_index = 5
 position = Vector2(416, 271)
+
+[node name="Example Item" parent="Player" index="4" instance=ExtResource("3_npjtm")]
+collision_layer = 1
+radius = 40.045
 
 [node name="TestWall" parent="." index="1" instance=ExtResource("3_qdcyq")]
 position = Vector2(5, 0)
@@ -30,5 +35,6 @@ scale = Vector2(1, 1.6)
 
 [node name="Example Enemy" parent="." index="5" instance=ExtResource("4_wodb3")]
 position = Vector2(96, 116)
+collision_mask = 1
 
 [node name="HUD" parent="." index="6" instance=ExtResource("5_5n3ta")]

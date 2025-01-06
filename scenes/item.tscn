@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvnvclb5ao32q"]
+
+[ext_resource type="Script" path="res://item.gd" id="1_hhiuq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ysfew"]
+
+[node name="Item" type="RigidBody2D"]
+collision_layer = 4
+contact_monitor = true
+max_contacts_reported = 30000
+script = ExtResource("1_hhiuq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ysfew")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

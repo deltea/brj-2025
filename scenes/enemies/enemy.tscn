@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://scenes/enemies/state_machine.gd" id="2_uhek4"]
 
 [node name="Enemy" type="RigidBody2D"]
+collision_mask = 7
 script = ExtResource("1_1h43w")
 
 [node name="State Machine" type="Node" parent="."]
