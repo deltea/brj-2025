@@ -11,6 +11,8 @@ script = ExtResource("1_1h43w")
 [node name="State Machine" type="Node" parent="."]
 script = ExtResource("2_uhek4")
 
+[node name="Modifiers" type="Node" parent="."]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
