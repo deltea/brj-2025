@@ -4,7 +4,7 @@
 size = Vector2(9, 320)
 
 [node name="Test Collider" type="StaticBody2D"]
-collision_mask = 7
+collision_layer = 2147483648
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 159)
