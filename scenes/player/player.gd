@@ -6,6 +6,10 @@ class_name Player extends Entity
 
 var drag_start_pos : Vector2;
 
+func _ready():
+	#Such that if I add a ready function, I don't forget this
+	super._ready();
+
 func _enter_tree() -> void:
 	RoomManager.current_room.player = self;
 
