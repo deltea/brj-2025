@@ -33,8 +33,8 @@ enemy = NodePath("../..")
 script = ExtResource("3_ccpcs")
 enemy = NodePath("../..")
 
-[node name="CollisionShape2D" parent="." index="1"]
+[node name="CollisionShape2D" parent="." index="2"]
 shape = SubResource("CircleShape2D_5wekg")
 
-[node name="AnimatedSprite2D" parent="." index="2"]
+[node name="AnimatedSprite2D" parent="." index="3"]
 sprite_frames = SubResource("SpriteFrames_o6qwq")

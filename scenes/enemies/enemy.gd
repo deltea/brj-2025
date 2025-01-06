@@ -4,7 +4,7 @@ class_name Enemy;
 @onready var player : Player = %Player;
 
 func _ready():
-	pass;
+	super._ready();
 
 func _physics_process(delta: float) -> void:
 	super._physics_process(delta);
