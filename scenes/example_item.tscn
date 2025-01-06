@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://calsodcj6nbtc"]
+[gd_scene load_steps=13 format=3 uid="uid://calsodcj6nbtc"]
 
 [ext_resource type="PackedScene" uid="uid://cvnvclb5ao32q" path="res://scenes/item.tscn" id="1_2ifcj"]
 [ext_resource type="Texture2D" uid="uid://dbqhjfp6tsu2g" path="res://assets/Sprites/ItemSprites/Fire/Fire 4 - 1.png" id="2_2gsor"]
+[ext_resource type="Script" path="res://scenes/example_item.gd" id="2_6l6rk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p0al6"]
 atlas = ExtResource("2_2gsor")
@@ -68,6 +69,8 @@ animations = [{
 }]
 
 [node name="Example Item" instance=ExtResource("1_2ifcj")]
+script = ExtResource("2_6l6rk")
+rotation_speed_mult = 0.001
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 position = Vector2(0, -11)

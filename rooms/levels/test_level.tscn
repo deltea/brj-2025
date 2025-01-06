@@ -11,11 +11,13 @@
 
 [node name="Player" parent="." index="0" instance=ExtResource("2_av0wu")]
 z_index = 5
-position = Vector2(416, 271)
+position = Vector2(275, 213)
 
 [node name="Example Item" parent="Player" index="4" instance=ExtResource("3_npjtm")]
+position = Vector2(7, -24)
 collision_layer = 1
 radius = 40.045
+rotation_speed_mult = 0.1
 
 [node name="TestWall" parent="." index="1" instance=ExtResource("3_qdcyq")]
 position = Vector2(5, 0)
