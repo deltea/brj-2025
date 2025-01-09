@@ -9,8 +9,5 @@ func _ready():
 func _physics_process(delta: float) -> void:
 	super._physics_process(delta);
 
-func _on_collided(collision) -> void:
-	pass # Replace with function body.
-
 func _on_died() -> void:
 	queue_free();

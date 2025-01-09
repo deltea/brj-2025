@@ -35,7 +35,6 @@ func _on_collided(body : Node) -> void:
 	if body is Entity:
 		body.take_damage(damage, self)
 		take_damage(body.damage, body);
-		print(health)
 
 func _on_died() -> void:
 	get_tree().reload_current_scene();

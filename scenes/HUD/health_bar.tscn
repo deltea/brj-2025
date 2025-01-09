@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbyjtacx6sbhn"]
+
+[ext_resource type="Script" path="res://scripts/health_bar_base.gd" id="1_5juu5"]
+[ext_resource type="Texture2D" uid="uid://cdhtwq1brrby" path="res://assets/UI Images/Healthbar.png" id="1_j21nv"]
+[ext_resource type="Script" path="res://utils/sprite-plus/sprite.gd" id="2_fj702"]
+[ext_resource type="Texture2D" uid="uid://i4ehaawlfqwr" path="res://assets/UI Images/Health.png" id="3_7fkly"]
+
+[node name="Movable Health Bar" type="Node2D"]
+script = ExtResource("1_5juu5")
+
+[node name="HealthBarContainer" type="Sprite2D" parent="."]
+position = Vector2(34, -7)
+texture = ExtResource("1_j21nv")
+script = ExtResource("2_fj702")
+
+[node name="Health" type="Sprite2D" parent="."]
+position = Vector2(34, -7)
+texture = ExtResource("3_7fkly")
+script = ExtResource("2_fj702")

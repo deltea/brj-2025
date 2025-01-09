@@ -14,9 +14,7 @@ func _ready() -> void:
 	create_timer_recurse(timer_interval, total_intervals);
 
 func create_timer_recurse(timer_interval : float, ticks_left : int):
-	print(ticks_left)
 	if ticks_left == 0:
-		print("Deleting")
 		queue_free();
 	timer = get_tree().create_timer(timer_interval)
 	timer.connect("timeout", func(): create_timer_recurse(timer_interval, ticks_left - 1))
