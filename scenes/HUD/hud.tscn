@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://bojhr0psvqjli"]
+
+[ext_resource type="PackedScene" uid="uid://p20ycxlowib8" path="res://scenes/HUD/immovable_health_bar.tscn" id="1_v3lci"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Immovable Health Bar" parent="VBoxContainer/Control" instance=ExtResource("1_v3lci")]

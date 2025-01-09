@@ -26,7 +26,6 @@ func set_up(global_positionL : Vector2, damage_amountL : int, velocity_multL : f
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("In scene")
 	text = str(damage_amount);
 	var tween = get_tree().create_tween();
 	tween.set_parallel();

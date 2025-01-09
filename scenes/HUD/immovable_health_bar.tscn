@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://p20ycxlowib8"]
+
+[ext_resource type="PackedScene" uid="uid://dbyjtacx6sbhn" path="res://scenes/HUD/health_bar.tscn" id="1_8f0oh"]
+[ext_resource type="Script" path="res://scenes/HUD/immovable_health_bar.gd" id="2_8m5tm"]
+
+[node name="Immovable Health Bar" instance=ExtResource("1_8f0oh")]
+script = ExtResource("2_8m5tm")
