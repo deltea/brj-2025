@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://car3vtpbyx2y6"]
+
+[ext_resource type="PackedScene" uid="uid://dxsim87luwpwc" path="res://scenes/enemies/enemy.tscn" id="1_oyaux"]
+[ext_resource type="Script" path="res://scenes/enemies/Bosses/boss_spawn.gd" id="2_24fli"]
+
+[node name="Boss Spawn" instance=ExtResource("1_oyaux")]
+script = ExtResource("2_24fli")
+bounce_strength = 1.0
+angular_speed = 0.1
+init_health = 100
+health = 0.0
+damage = 10.0
+diamater = 32.0

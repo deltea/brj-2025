@@ -10,7 +10,6 @@ var player : RigidBody2D;
 @onready var move_speed = 120;
 
 func Enter():
-	print("Going to Charge")
 	player = RoomManager.current_room.player;
 
 func Physics_Update(_delta : float) -> void:

@@ -1,10 +1,13 @@
 extends RigidBody2D
 class_name VisibleItem;
 
-@onready var parent : RigidBody2D = get_parent();
-@export var radius : float = 20;
+
+@export var radius_increase : float = 10;
 @export var rotation_speed_mult = 1.0;
 @export var move_speed = 100;
+
+@onready var parent : Entity = get_parent();
+@onready var radius = (parent.diamater/2) + radius_increase;
 
 var time_elapsed = 	0;
 

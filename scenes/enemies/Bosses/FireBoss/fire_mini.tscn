@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4bpo4o8k6fif"]
+
+[ext_resource type="PackedScene" uid="uid://car3vtpbyx2y6" path="res://scenes/enemies/Bosses/boss_spawn.tscn" id="1_gtilt"]
+[ext_resource type="Script" path="res://scripts/states/Boss States/Fire Boss/MiniCharge.gd" id="2_uvak7"]
+
+[node name="Fire Mini" instance=ExtResource("1_gtilt")]
+
+[node name="State Machine" parent="." index="0" node_paths=PackedStringArray("initial_state")]
+initial_state = NodePath("MiniCharge")
+
+[node name="MiniCharge" type="Node" parent="State Machine" index="0" node_paths=PackedStringArray("mini_blade")]
+script = ExtResource("2_uvak7")
+mini_blade = NodePath("../..")

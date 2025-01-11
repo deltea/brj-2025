@@ -1,14 +1,16 @@
 class_name Player extends Entity
 
 @export var slow_down_factor = 0.1;
+@export var initial_items : Array[VisibleItem] = []
 
 @onready var drag_line = $DragLine;
 
 var drag_start_pos : Vector2;
 
 func _ready():
-	#Such that if I add a ready function, I don't forget this
 	super._ready();
+	for item : VisibleItem in initial_items:
+		add_item(item);
 
 func _enter_tree() -> void:
 	RoomManager.current_room.player = self;

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwblthyreff46"]
+
+[ext_resource type="PackedScene" uid="uid://dxsim87luwpwc" path="res://scenes/enemies/enemy.tscn" id="1_us03r"]
+[ext_resource type="Script" path="res://scenes/enemies/Bosses/boss.gd" id="2_kcrrw"]
+
+[node name="Boss" instance=ExtResource("1_us03r")]
+script = ExtResource("2_kcrrw")
+bounce_strength = null
+angular_speed = null
+init_health = null
+health = null
+damage = null
+diamater = null

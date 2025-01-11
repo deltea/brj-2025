@@ -7,11 +7,19 @@
 collision_layer = 8
 collision_mask = 2147483663
 script = ExtResource("1_1h43w")
+bounce_strength = null
+angular_speed = null
+init_health = null
+health = null
+damage = null
+diamater = null
 
 [node name="State Machine" type="Node" parent="."]
 script = ExtResource("2_uhek4")
 
 [node name="Modifiers" type="Node" parent="."]
+
+[node name="Items" type="Node" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
