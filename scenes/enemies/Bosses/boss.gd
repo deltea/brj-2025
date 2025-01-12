@@ -1,4 +1,5 @@
 extends Enemy
+class_name Boss;
 
 func _ready() -> void:
 	super._ready();

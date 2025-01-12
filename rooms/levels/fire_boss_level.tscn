@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://d16ycmyedh0ot"]
+
+[ext_resource type="PackedScene" uid="uid://c5htw6kws7a1r" path="res://rooms/level.tscn" id="1_v2t6v"]
+[ext_resource type="PackedScene" uid="uid://ctoo0n22cfbd7" path="res://scenes/player/player.tscn" id="2_7ws5g"]
+[ext_resource type="PackedScene" uid="uid://danvefsaxgyvo" path="res://scenes/test_collider.tscn" id="3_ek8rw"]
+[ext_resource type="PackedScene" uid="uid://5p2imapuoolk" path="res://scenes/enemies/Bosses/FireBoss/Fire_boss.tscn" id="4_0sj2o"]
+[ext_resource type="PackedScene" uid="uid://bojhr0psvqjli" path="res://scenes/HUD/hud.tscn" id="5_ubqvk"]
+
+[node name="FireBossLevel" instance=ExtResource("1_v2t6v")]
+
+[node name="Player" parent="." index="0" instance=ExtResource("2_7ws5g")]
+position = Vector2(390, 247)
+init_health = 10000.0
+
+[node name="Test Collider" parent="." index="1" instance=ExtResource("3_ek8rw")]
+
+[node name="Test Collider2" parent="." index="2" instance=ExtResource("3_ek8rw")]
+position = Vector2(479, -1)
+
+[node name="Test Collider3" parent="." index="3" instance=ExtResource("3_ek8rw")]
+position = Vector2(487, -4)
+rotation = 1.5708
+scale = Vector2(1, 1.6)
+
+[node name="Test Collider4" parent="." index="4" instance=ExtResource("3_ek8rw")]
+position = Vector2(488, 320)
+rotation = 1.5708
+scale = Vector2(1, 1.6)
+
+[node name="Fire Boss" parent="." index="5" instance=ExtResource("4_0sj2o")]
+position = Vector2(78, 79)
+
+[node name="HUD" parent="." index="6" instance=ExtResource("5_ubqvk")]

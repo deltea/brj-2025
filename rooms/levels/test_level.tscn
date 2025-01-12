@@ -12,13 +12,6 @@
 [node name="Player" parent="." index="0" instance=ExtResource("2_av0wu")]
 z_index = 5
 position = Vector2(275, 213)
-slow_down_factor = 0.1
-bounce_strength = 1.0
-angular_speed = 0.1
-init_health = 100
-health = 0.0
-damage = 10.0
-diamater = 32.0
 
 [node name="Example Item" parent="Player" index="4" instance=ExtResource("3_npjtm")]
 position = Vector2(7, -24)
@@ -44,5 +37,11 @@ scale = Vector2(1, 1.6)
 [node name="Example Enemy" parent="." index="5" instance=ExtResource("4_wodb3")]
 position = Vector2(96, 116)
 collision_priority = 10.0
+contact_monitor = false
+max_contacts_reported = 0
+bounce_strength = 1.0
+angular_speed = 0.1
+init_health = 100.0
+damage = 10.0
 
 [node name="HUD" parent="." index="6" instance=ExtResource("5_5n3ta")]

@@ -5,9 +5,8 @@
 
 [node name="Boss" instance=ExtResource("1_us03r")]
 script = ExtResource("2_kcrrw")
-bounce_strength = null
-angular_speed = null
-init_health = null
-health = null
-damage = null
-diamater = null
+bounce_strength = 1.0
+angular_speed = 0.1
+init_health = 100.0
+health = 0.0
+damage = 10.0

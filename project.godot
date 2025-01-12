@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="BRJ 2025"
-run/main_scene="res://rooms/levels/test_level.tscn"
+run/main_scene="res://rooms/levels/fire_boss_level.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 

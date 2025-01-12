@@ -20,13 +20,11 @@ animations = [{
 }]
 
 [node name="Fire Mini" instance=ExtResource("1_gtilt")]
-disable_mode = 2
 script = ExtResource("2_o2q6t")
+self_scene = null
 rotation_range = 60.0
-collision_immunity = 0.1
-threshold_diameter = 4
 init_health = 100.0
-diameter = 16.0
+diamater = 16.0
 
 [node name="State Machine" parent="." index="0" node_paths=PackedStringArray("initial_state")]
 initial_state = NodePath("MiniCharge")

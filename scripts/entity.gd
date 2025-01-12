@@ -7,17 +7,21 @@ signal died;
 
 @export var bounce_strength : float = 1.0;
 @export var angular_speed : float = 0.1;
-@export var init_health = 100;
+@export var init_health : float = 100;
 @export var health : float;
 @export var damage : float = 10.0;
-@export var diamater : float = 32;
+@export var diameter : float = 32;
+
+@export var initial_items : Array[VisibleItem] = []
 
 @onready var damage_indicator_scene : PackedScene = load("res://scenes/damage_indicator.tscn");
 @onready var health_bar_scene : PackedScene = load("res://scenes/HUD/enemy_health_bar.tscn");
 
 func _ready():
-	_resize(diamater)
 	health = init_health;
+	_resize(diameter)
+	for item : VisibleItem in initial_items:
+		add_item(item);
 
 func _physics_process(delta: float) -> void:
 	$AnimatedSprite2D.rotation += linear_velocity.length() * angular_speed * delta;
