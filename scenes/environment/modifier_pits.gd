@@ -3,10 +3,10 @@ class_name ModifierPit;
 
 @export var fades = false;
 @export var fade_time = 4.0;
-
 var modifier : Modifier;
 
 func _on_body_entered(body: Node2D) -> void:
+	print(body)
 	if body is Entity:
 		body.add_modifier(modifier);
 

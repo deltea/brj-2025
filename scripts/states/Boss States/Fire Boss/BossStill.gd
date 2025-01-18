@@ -2,7 +2,6 @@ extends State
 class_name FireBossStill;
 
 @export var boss : Entity;
-
 @export var attack_interval = 2;
 
 @onready var countdown = attack_interval;

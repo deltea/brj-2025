@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://scenes/environment/modifier_pits.gd" id="1_yl6qw"]
 
 [node name="Modifier Pit" type="Area2D"]
+collision_mask = 14
 script = ExtResource("1_yl6qw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
