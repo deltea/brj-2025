@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://5p2imapuoolk"]
+[gd_scene load_steps=11 format=3 uid="uid://5p2imapuoolk"]
 
 [ext_resource type="PackedScene" uid="uid://dwblthyreff46" path="res://scenes/enemies/Bosses/Boss.tscn" id="1_34tu1"]
 [ext_resource type="Script" path="res://scenes/enemies/Bosses/FireBoss/fire_boss.gd" id="2_t6tmk"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://d4bpo4o8k6fif" path="res://scenes/enemies/Bosses/FireBoss/fire_mini.tscn" id="4_0fhqy"]
 [ext_resource type="Script" path="res://scripts/states/Boss States/Fire Boss/BossStill.gd" id="4_eomtf"]
 [ext_resource type="Texture2D" uid="uid://dusgvjfx0r55f" path="res://assets/Sprites/EnemySprites/PlaceHolderFireBoss.png" id="6_7233i"]
+[ext_resource type="Script" path="res://scripts/states/Boss States/Fire Boss/BossPitThrow.gd" id="6_nxu03"]
+[ext_resource type="PackedScene" uid="uid://07smuk2pp7s5" path="res://scenes/environment/fire_pit.tscn" id="7_gya7b"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5mrj8"]
 radius = 29.1548
@@ -39,6 +41,11 @@ mini_fire_blades = ExtResource("4_0fhqy")
 [node name="FireBossStill" type="Node" parent="State Machine" index="1" node_paths=PackedStringArray("boss")]
 script = ExtResource("4_eomtf")
 boss = NodePath("../..")
+
+[node name="BossPitThrow" type="Node" parent="State Machine" index="2" node_paths=PackedStringArray("boss")]
+script = ExtResource("6_nxu03")
+boss = NodePath("../..")
+fire_pit_scene = ExtResource("7_gya7b")
 
 [node name="CollisionShape2D" parent="." index="3"]
 shape = SubResource("CircleShape2D_5mrj8")
