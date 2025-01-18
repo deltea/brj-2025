@@ -43,5 +43,4 @@ func get_position() -> Vector2:
 	return actual_position;
 
 func transition_to_idle():
-	print("Transferring")
 	Transitioned.emit(self, "firebossstill");
