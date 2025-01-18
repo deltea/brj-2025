@@ -38,3 +38,5 @@ position = Vector2(78, 79)
 [node name="Fire Pit" parent="." index="7" instance=ExtResource("7_6x8nk")]
 position = Vector2(420, 177)
 collision_mask = 1
+fades = null
+fade_time = null

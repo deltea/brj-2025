@@ -37,8 +37,6 @@ func get_position() -> Vector2:
 		position = max_throw_coords
 	var progress = randf_range(0.4,1);
 	
-	print(progress)
-	
 	var actual_position = (boss.global_position * (1-progress)) + (position * progress);
 	return actual_position;
 

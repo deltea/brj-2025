@@ -22,7 +22,8 @@ animations = [{
 
 [node name="Fire Pit" instance=ExtResource("1_j81sr")]
 script = ExtResource("2_xicc0")
-fades = true
+fades = null
+fade_time = null
 
 [node name="CollisionShape2D" parent="." index="0"]
 position = Vector2(-3.5, 1.5)

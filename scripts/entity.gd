@@ -61,9 +61,9 @@ func add_modifier(modifier : Modifier):
 	if $Modifiers == null:
 		print("No \"Modifier\" Node")
 		return;
-	var existing_items = $Items.get_children();
-	for existing_item in existing_items:
-		if existing_item.name == modifier.name:
+	var existing_modifiers = $Modifiers.get_children();
+	for existing_modifier in existing_modifiers:
+		if existing_modifier.is_class(modifier.get_class()):
 			return;
 	$Modifiers.add_child(modifier);
 
