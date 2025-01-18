@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://d16ycmyedh0ot"]
+[gd_scene load_steps=7 format=3 uid="uid://d16ycmyedh0ot"]
 
 [ext_resource type="PackedScene" uid="uid://c5htw6kws7a1r" path="res://rooms/level.tscn" id="1_v2t6v"]
 [ext_resource type="PackedScene" uid="uid://ctoo0n22cfbd7" path="res://scenes/player/player.tscn" id="2_7ws5g"]
+[ext_resource type="PackedScene" uid="uid://calsodcj6nbtc" path="res://scenes/Items/fire_item.tscn" id="3_6xinx"]
 [ext_resource type="PackedScene" uid="uid://danvefsaxgyvo" path="res://scenes/test_collider.tscn" id="3_ek8rw"]
 [ext_resource type="PackedScene" uid="uid://5p2imapuoolk" path="res://scenes/enemies/Bosses/FireBoss/Fire_boss.tscn" id="4_0sj2o"]
 [ext_resource type="PackedScene" uid="uid://bojhr0psvqjli" path="res://scenes/HUD/hud.tscn" id="5_ubqvk"]
@@ -11,6 +12,7 @@
 [node name="Player" parent="." index="0" instance=ExtResource("2_7ws5g")]
 position = Vector2(390, 247)
 init_health = 10000.0
+initial_items = Array[PackedScene]([ExtResource("3_6xinx")])
 
 [node name="Test Collider" parent="." index="1" instance=ExtResource("3_ek8rw")]
 

@@ -12,15 +12,16 @@ signal died;
 @export var damage : float = 10.0;
 @export var diameter : float = 32;
 
-@export var initial_items : Array[VisibleItem] = []
+@export var initial_items : Array[PackedScene] = []
 
-@onready var damage_indicator_scene : PackedScene = load("res://scenes/damage_indicator.tscn");
+@onready var damage_indicator_scene : PackedScene = load("res://scenes/HUD/damage_indicator.tscn");
 @onready var health_bar_scene : PackedScene = load("res://scenes/HUD/enemy_health_bar.tscn");
 
 func _ready():
 	health = init_health;
 	_resize(diameter)
-	for item : VisibleItem in initial_items:
+	for item_scene : PackedScene in initial_items:
+		var item = item_scene.instantiate();
 		add_item(item);
 
 func _physics_process(delta: float) -> void:
@@ -54,8 +55,17 @@ func add_item(item : VisibleItem):
 	for existing_item in existing_items:
 		if existing_item.name == item.name:
 			return;
-	
 	$Items.add_child(item);
+
+func add_modifier(modifier : Modifier):
+	if $Modifiers == null:
+		print("No \"Modifier\" Node")
+		return;
+	var existing_items = $Items.get_children();
+	for existing_item in existing_items:
+		if existing_item.name == modifier.name:
+			return;
+	$Modifiers.add_child(modifier);
 
 func _on_body_entered(body: Node) -> void:
 	collided.emit(body);

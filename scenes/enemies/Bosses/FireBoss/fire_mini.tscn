@@ -25,7 +25,9 @@ script = ExtResource("2_o2q6t")
 rotation_range = 60.0
 collision_immunity = 0.1
 threshold_diameter = 4
+LIFETIME = 5
 init_health = 100.0
+damage = 2.0
 diameter = 16.0
 
 [node name="State Machine" parent="." index="0" node_paths=PackedStringArray("initial_state")]

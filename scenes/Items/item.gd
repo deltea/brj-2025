@@ -6,8 +6,8 @@ class_name VisibleItem;
 @export var rotation_speed_mult = 1.0;
 @export var move_speed = 100;
 
-@onready var parent : Entity = get_parent();
-@onready var radius = (parent.diamater/2) + radius_increase;
+@onready var parent : Entity = get_parent().get_parent();
+@onready var radius = (parent.diameter/2) + radius_increase;
 
 var time_elapsed = 	0;
 

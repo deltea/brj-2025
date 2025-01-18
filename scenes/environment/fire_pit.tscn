@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://07smuk2pp7s5"]
+
+[ext_resource type="PackedScene" uid="uid://3ux350llm4sv" path="res://scenes/environment/modifier_pits.tscn" id="1_j81sr"]
+[ext_resource type="Shader" path="res://scenes/environment/fire_pit.gdshader" id="2_ya5u0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ikjn2"]
+shader = ExtResource("2_ya5u0")
+shader_parameter/aspect_ratio = Vector2(1, 1)
+shader_parameter/color = Vector3(1, 1, 1)
+shader_parameter/scale_factor = 1.0
+shader_parameter/amount_of_points = 1
+shader_parameter/points = null
+
+[node name="Fire Pit" instance=ExtResource("1_j81sr")]
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+material = SubResource("ShaderMaterial_ikjn2")
