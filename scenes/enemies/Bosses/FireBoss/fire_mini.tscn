@@ -1,9 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://d4bpo4o8k6fif"]
+[gd_scene load_steps=11 format=3 uid="uid://d4bpo4o8k6fif"]
 
 [ext_resource type="PackedScene" uid="uid://car3vtpbyx2y6" path="res://scenes/enemies/Bosses/boss_spawn.tscn" id="1_gtilt"]
 [ext_resource type="Script" path="res://scenes/enemies/Bosses/FireBoss/fire_mini.gd" id="2_o2q6t"]
 [ext_resource type="Script" path="res://scripts/states/Boss States/Fire Boss/MiniCharge.gd" id="2_uvak7"]
 [ext_resource type="Texture2D" uid="uid://dusgvjfx0r55f" path="res://assets/Sprites/EnemySprites/PlaceHolderFireBoss.png" id="3_j11sf"]
+[ext_resource type="Texture2D" uid="uid://bnfhw7d43fsul" path="res://assets/Sprites/ItemSprites/Fire animation/pixil-frame-0.png" id="5_k2l7m"]
+[ext_resource type="Texture2D" uid="uid://bduya2m7vd2nq" path="res://assets/Sprites/ItemSprites/Fire animation/pixil-frame-1.png" id="6_ixap7"]
+[ext_resource type="Texture2D" uid="uid://st3oh2jm6yu3" path="res://assets/Sprites/ItemSprites/Fire animation/pixil-frame-2.png" id="7_pee74"]
+[ext_resource type="Texture2D" uid="uid://ccnstbiyrt1aj" path="res://assets/Sprites/ItemSprites/Fire animation/pixil-frame-3.png" id="8_foxkv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vmfbr"]
 radius = 31.0
@@ -17,6 +21,23 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_k2l7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ixap7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pee74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_foxkv")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 10.0
 }]
 
 [node name="Fire Mini" instance=ExtResource("1_gtilt")]
@@ -42,6 +63,8 @@ shape = SubResource("CircleShape2D_vmfbr")
 
 [node name="AnimatedSprite2D" parent="." index="4"]
 sprite_frames = SubResource("SpriteFrames_dvhwa")
+animation = &"new_animation"
 autoplay = "default"
+frame_progress = 0.0890135
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
