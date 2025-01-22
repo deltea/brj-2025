@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dblppfoq00bb"]
+[gd_scene load_steps=8 format=3 uid="uid://dblppfoq00bb"]
 
 [ext_resource type="PackedScene" uid="uid://c5htw6kws7a1r" path="res://rooms/level.tscn" id="1_nfnad"]
 [ext_resource type="PackedScene" uid="uid://ctoo0n22cfbd7" path="res://scenes/player/player.tscn" id="2_av0wu"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://hs4jyaqetvdb" path="res://scenes/enemies/example_enemy.tscn" id="4_wodb3"]
 [ext_resource type="PackedScene" uid="uid://bojhr0psvqjli" path="res://scenes/HUD/hud.tscn" id="5_5n3ta"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ime3s"]
+
 [node name="TestLevel" instance=ExtResource("1_nfnad")]
 
 [node name="Player" parent="." index="0" instance=ExtResource("2_av0wu")]
@@ -14,6 +16,7 @@ z_index = 5
 position = Vector2(275, 213)
 
 [node name="Example Item" parent="Player" index="4" instance=ExtResource("3_npjtm")]
+material = SubResource("CanvasItemMaterial_ime3s")
 position = Vector2(7, -24)
 collision_layer = 1
 rotation_speed_mult = 0.1

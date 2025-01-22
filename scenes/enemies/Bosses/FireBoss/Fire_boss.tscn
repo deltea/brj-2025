@@ -5,18 +5,18 @@
 [ext_resource type="Script" path="res://scripts/states/Boss States/Fire Boss/BossMinisLaunch.gd" id="3_28nse"]
 [ext_resource type="PackedScene" uid="uid://d4bpo4o8k6fif" path="res://scenes/enemies/Bosses/FireBoss/fire_mini.tscn" id="4_0fhqy"]
 [ext_resource type="Script" path="res://scripts/states/Boss States/Fire Boss/BossStill.gd" id="4_eomtf"]
-[ext_resource type="Texture2D" uid="uid://dusgvjfx0r55f" path="res://assets/Sprites/EnemySprites/PlaceHolderFireBoss.png" id="6_7233i"]
 [ext_resource type="Script" path="res://scripts/states/Boss States/Fire Boss/BossPitThrow.gd" id="6_nxu03"]
 [ext_resource type="PackedScene" uid="uid://07smuk2pp7s5" path="res://scenes/environment/fire_pit.tscn" id="7_gya7b"]
+[ext_resource type="Texture2D" uid="uid://desnbtnnnidpi" path="res://assets/Sprites/EnemySprites/pixil-frame-0 (2).png" id="8_odmoh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5mrj8"]
-radius = 29.1548
+radius = 286.044
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_p7dgf"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_7233i")
+"texture": ExtResource("8_odmoh")
 }],
 "loop": true,
 "name": &"default",
